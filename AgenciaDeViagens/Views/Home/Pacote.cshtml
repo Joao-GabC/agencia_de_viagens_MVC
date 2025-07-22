@@ -1,0 +1,130 @@
+﻿@using System.Text.Json
+@model AgenciaDeViagens.ViewModel.ReservarViewModel
+@{
+	int dias = (Model.DataFinal - Model.DataInicial).Days;
+}
+
+<div class="container">
+	<h1 class="ms-2">@Model.Titulo</h1>
+	<hr />
+
+	<section class="mt-4">
+		<h3>Informações do local</h3>
+		<p class="mb-5 mt-3">@Html.Raw(Model.TextoDaPagina)</p>
+	</section>
+
+	<section>
+		<h3>Imagens do local</h3>
+		<div id="carouselExampleIndicators" class="carousel slide mt-4 mx-5 bg-black">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="@Model.ImagemUrl[0]" class="d-block w-100 img-content" alt="...">
+				</div>
+				@foreach(var image in Model.ImagemUrl.Skip(1))
+				{
+					<div class="carousel-item">
+						<img src="@image" class="d-block w-100 img-content" alt="...">
+					</div>
+				}
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</section>
+	
+	<p class="text-secondary fst-italic text-center mt-5">Agende já a data de estadia que nós calculamos o preço para você e resolvemos tudo com o hotel! ;)</p>
+	<hr />
+
+	<section class="row">
+		<div class="col p-0">
+			<form method="post" asp-controller="Home" asp-action="CalcularPreco">
+				<input asp-for="Id" asp-route-id="@Model.Id" hidden />
+
+				<div class="row mb-1">
+					<div class="col-6">
+						<label class="me-3">Insira aqui a data de check-in:</label>
+						<input name="DataInicial" class="form-control datepicker" type="date" id="checkin"/>
+					</div>
+					<div class="col-6">
+						<label class="me-3">Insira aqui a data de check-out:</label>
+						<input name="DataFinal" class="form-control datepicker" type="date" id="checkout" />
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary mt-3">Calcular Preço Total</button>
+			</form>
+		</div>
+	</section>
+
+	@if (Model.DataInicial != DateTime.MinValue)
+	{
+		<hr />
+		<section class="row mt-3" id="total">
+			<div class="col p-0">
+				@if(dias == 1)
+				{
+					<p class="mt-1">A estadia durará 1 dia. Total a pagar: <span class="h5 text-success">@Model.PrecoPorNoite R$</span></p>
+				}
+				else
+				{
+					<p class="mt-1">A estadia durará @dias dias. Total a pagar: <span class="h5 text-success">@(dias * Model.PrecoPorNoite) R$</span></p>
+				}
+			</div>
+			<div class="col p-0 d-flex justify-content-end">
+				<form method="post" asp-action="Pagar">
+					<input name="idPacote" value="@Model.Id" hidden />
+					<input name="PrecoTotal" value="@Model.PrecoTotal" hidden />
+					<input name="DataInicial" value="@Model.DataInicial" hidden />
+					<input name="DataFinal" value="@Model.DataFinal" hidden />
+					<button type="submit" class="btn btn-success">Realizar Pagamento</button>
+				</form>
+			</div>
+		</section>
+	}
+</div>
+
+@{
+	var datasIndisponiveisJson = JsonSerializer.Serialize(
+		Model.DatasOcupadas.Select(d => new
+		{
+			from = d.DataInicio.ToString("dd-MM-yyyy"),
+			to = d.DataFim.ToString("dd-MM-yyyy")
+		})
+	);
+}
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const datasIndisponiveis = @Html.Raw(datasIndisponiveisJson);
+		// Inicializa o flatpickr para o check-in
+		const checkin = flatpickr("#checkin", {
+			dateFormat: "d-m-Y",
+			minDate: "today",
+			disable: datasIndisponiveis,
+			onChange: function (selectedDates, dateStr) {
+				if (selectedDates.length > 0) {
+					const minCheckoutDate = new Date(selectedDates[0]);
+					minCheckoutDate.setDate(minCheckoutDate.getDate() + 1);
+					checkout.set("minDate", minCheckoutDate);
+				}
+			}
+		});
+
+		// Inicializa o flatpickr para o check-out
+		const checkout = flatpickr("#checkout", {
+			dateFormat: "d-m-Y",
+			clickOpens: true,
+			allowInput: true
+		});
+	});
+</script>

@@ -1,0 +1,49 @@
+﻿@model AgenciaDeViagens.ViewModel.RegisterAtendenteViewModel
+@{
+    ViewData["Title"] = "Registrar";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form method="post">
+        <h4>Crie uma nova conta de funcionário.</h4>
+        <hr />
+        <div asp-validation-summary="All" style="color: red;"></div>
+
+        <h5>Dados da Conta</h5>
+        <div class="d-flex mb-3">
+            <div class="me-3">
+                <label asp-for="Email"></label><br />
+                <input asp-for="Email" class="form-control" />
+            </div>
+
+            <div class="me-3">
+                <label>Senha</label><br />
+                <input asp-for="Password" class="form-control" />
+            </div>
+
+            <div>
+                <label asp-for="ConfirmPassword"></label><br />
+                <input asp-for="ConfirmPassword" class="form-control" />
+            </div>
+        </div>
+
+        <h5>Seus dados</h5>
+        <div class="d-flex mb-3">
+            <div class="me-3">
+                <label asp-for="Nome"></label><br />
+                <input asp-for="Nome" class="form-control" />
+            </div>
+            <div>
+                <label asp-for="Departamento"></label><br />
+                <input asp-for="Departamento" class="form-control" />
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <button type="submit" class="btn btn-success me-3">Registrar</button>
+            <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Fazer conta de cliente</a>
+        </div>
+    </form>
+</div>
