@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -26,24 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\appsettings.json",
               "RelativeDocumentMoniker": "AgenciaDeViagens\\appsettings.json",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\appsettings.json",
               "RelativeToolTip": "AgenciaDeViagens\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-28T21:37:50.024Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "AgenciaDeViagens\\Controllers\\AdminController.cs",
@@ -64,8 +64,7 @@
               "RelativeToolTip": "AgenciaDeViagens\\Views\\Admin\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T22:29:44.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T22:29:44.835Z"
             },
             {
               "$type": "Document",
@@ -77,8 +76,7 @@
               "RelativeToolTip": "AgenciaDeViagens\\ViewModel\\DashboardViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T22:28:05.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T22:28:05.053Z"
             }
           ]
         }
