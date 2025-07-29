@@ -5,8 +5,6 @@ VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgenciaDeViagens", "AgenciaDeViagens\AgenciaDeViagens.csproj", "{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "backupagencia", "backupagencia\backupagencia.sqlproj", "{71D97D73-72AF-49A2-B0B0-B3321128EDF2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +15,6 @@ Global
 		{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71D97D73-72AF-49A2-B0B0-B3321128EDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71D97D73-72AF-49A2-B0B0-B3321128EDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71D97D73-72AF-49A2-B0B0-B3321128EDF2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{71D97D73-72AF-49A2-B0B0-B3321128EDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71D97D73-72AF-49A2-B0B0-B3321128EDF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71D97D73-72AF-49A2-B0B0-B3321128EDF2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
