@@ -1,0 +1,6 @@
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\backupagencia\bin\Debug\backupagencia.dacpac
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\backupagencia\bin\Debug\backupagencia.dll
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\backupagencia\bin\Debug\backupagencia.pdb
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\backupagencia\obj\Debug\backupagencia.sqlproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\backupagencia\obj\Debug\backupagencia.dll
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\backupagencia\obj\Debug\backupagencia.pdb

@@ -1,0 +1,87 @@
+28/07/2025 19:14:18	Este log contém informações sobre a operação do esquema importado no projeto 'backupagencia' no computador 'DESKTOP-AI6IL35' pelo usuário 'USUARIO'.
+28/07/2025 19:14:18	A importação do esquema de banco de dados foi iniciada.
+28/07/2025 19:14:23	Coletando credenciais do banco de dados
+28/07/2025 19:14:23	Coletando opções de banco de dados
+28/07/2025 19:14:23	Reunindo a opção de configuração no escopo do banco de dados genérico
+28/07/2025 19:14:23	Coletando usuários
+28/07/2025 19:14:23	Coletando funções
+28/07/2025 19:14:23	Coletando funções de aplicativo
+28/07/2025 19:14:23	Coletando associações de função
+28/07/2025 19:14:23	Coletando grupos de arquivos
+28/07/2025 19:14:23	Coletando catálogos de texto completo
+28/07/2025 19:14:23	Coletando assemblies
+28/07/2025 19:14:23	Coletando certificados
+28/07/2025 19:14:23	Coletando chaves assimétricas
+28/07/2025 19:14:23	Coletando chaves simétricas
+28/07/2025 19:14:23	Coletando chaves simétricas criptografadas
+28/07/2025 19:14:23	Coletando esquemas
+28/07/2025 19:14:23	Coletando coleções de esquema XML
+28/07/2025 19:14:23	Coletando tipos de dados definidos pelo usuário
+28/07/2025 19:14:23	Coletando tipos definidos pelo usuário
+28/07/2025 19:14:23	Coletando tipos de tabela
+28/07/2025 19:14:23	Coletando chaves exclusivas para tipos de tabela
+28/07/2025 19:14:23	Coletando chaves primárias para tipos de tabela
+28/07/2025 19:14:23	Reunindo índices para tipos de tabela
+28/07/2025 19:14:23	Coletando restrições de verificação para tipos de tabela
+28/07/2025 19:14:23	Coletando restrições padrão para tipos de tabela
+28/07/2025 19:14:23	Coletando funções de partição
+28/07/2025 19:14:23	Coletando esquemas de partição
+28/07/2025 19:14:23	Coletando funções
+28/07/2025 19:14:23	Coletando funções criptografadas
+28/07/2025 19:14:23	Coletando agregações
+28/07/2025 19:14:23	Coletando procedimentos
+28/07/2025 19:14:23	Coletando procedimentos criptografados
+28/07/2025 19:14:23	Coletando tabelas
+28/07/2025 19:14:23	Coletando chaves primárias
+28/07/2025 19:14:23	Coletando restrições exclusivas
+28/07/2025 19:14:23	Coletando chaves estrangeiras
+28/07/2025 19:14:23	Coletando restrições padrão
+28/07/2025 19:14:23	Coletando restrições de verificação
+28/07/2025 19:14:23	Coletando exibições
+28/07/2025 19:14:23	Coletando exibições criptografadas
+28/07/2025 19:14:23	Coletando índices
+28/07/2025 19:14:23	Coletando estatísticas
+28/07/2025 19:14:23	Coletando listas de palavras irrelevantes de índice de texto completo
+28/07/2025 19:14:23	Coletando listas de propriedades de pesquisa
+28/07/2025 19:14:23	Coletando propriedades de pesquisa
+28/07/2025 19:14:23	Coletando índices de texto completo
+28/07/2025 19:14:23	Coletando índices de repositório de coluna
+28/07/2025 19:14:23	Coletando índices espaciais
+28/07/2025 19:14:23	Coletando índices XML
+28/07/2025 19:14:23	Reunindo índices XML Seletivos
+28/07/2025 19:14:23	Coletando gatilhos criptografados
+28/07/2025 19:14:23	Coletando gatilhos
+28/07/2025 19:14:23	Coletando gatilhos ddl criptografados e clr
+28/07/2025 19:14:23	Coletando gatilhos ddl
+28/07/2025 19:14:23	Criando restrições de borda
+28/07/2025 19:14:23	Coletando sinônimos
+28/07/2025 19:14:23	Coletando padrões
+28/07/2025 19:14:23	Coletando ligações uddt de restrições de dados
+28/07/2025 19:14:23	Coletando regras
+28/07/2025 19:14:23	Coletando ligações uddt de restrições de dados
+28/07/2025 19:14:23	Coletando tipos de mensagem
+28/07/2025 19:14:23	Coletando filas
+28/07/2025 19:14:23	Coletando contratos
+28/07/2025 19:14:23	Coletando serviços
+28/07/2025 19:14:23	Coletando notificações de eventos
+28/07/2025 19:14:23	Coletando ligações de serviço remoto
+28/07/2025 19:14:23	Coletando prioridades do agente
+28/07/2025 19:14:23	Coletando assinaturas
+28/07/2025 19:14:23	Coletando opções de compactação
+28/07/2025 19:14:23	Coletando tipos de sequência
+28/07/2025 19:14:23	Reunindo as políticas de segurança
+28/07/2025 19:14:23	Coletar chaves de criptografia de coluna
+28/07/2025 19:14:23	Coletando chaves mestre de coluna
+28/07/2025 19:14:23	Coletando fontes de dados externas
+28/07/2025 19:14:23	Coletando formatos de arquivo externo
+28/07/2025 19:14:23	Coletando tabelas externas
+28/07/2025 19:14:23	Coletando propriedades estendidas
+28/07/2025 19:14:23	Coletando assemblies
+28/07/2025 19:14:23	Coletando credenciais
+28/07/2025 19:14:23	Coletando logons
+28/07/2025 19:14:23	Coletando auditorias de servidor
+28/07/2025 19:14:24	Examinando projeto para elementos duplicados
+28/07/2025 19:14:24	Processamento de elementos duplicados concluído
+28/07/2025 19:14:25	Importação do banco de dados concluída.
+28/07/2025 19:14:25	Um resumo da importação foi salvo no seguinte local: C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\backupagencia\Importar Logs de Esquema\backupagencia_20250728101418.log.
+28/07/2025 19:14:25	Clique em Concluir para continuar...
