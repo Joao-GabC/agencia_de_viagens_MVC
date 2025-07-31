@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\viewmodel\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\viewmodel\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\views\\home\\pacote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\views\\home\\pacote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\appsettings.json",
-              "RelativeDocumentMoniker": "AgenciaDeViagens\\appsettings.json",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\appsettings.json",
-              "RelativeToolTip": "AgenciaDeViagens\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-28T21:37:50.024Z",
+              "DocumentIndex": 1,
+              "Title": "Pacote.cshtml",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Home\\Pacote.cshtml",
+              "RelativeDocumentMoniker": "AgenciaDeViagens\\Views\\Home\\Pacote.cshtml",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Home\\Pacote.cshtml",
+              "RelativeToolTip": "AgenciaDeViagens\\Views\\Home\\Pacote.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T23:54:04.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "AgenciaDeViagens\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "AgenciaDeViagens\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AgenciaDeViagens\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AgenciaDeViagens\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAcwIYAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T22:28:19.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "AgenciaDeViagens\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "AgenciaDeViagens\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-22T22:29:44.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\ViewModel\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "AgenciaDeViagens\\ViewModel\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\ViewModel\\DashboardViewModel.cs",
-              "RelativeToolTip": "AgenciaDeViagens\\ViewModel\\DashboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T22:28:05.053Z"
+              "WhenOpened": "2025-07-30T23:52:17.001Z",
+              "EditorCaption": ""
             }
           ]
         }
