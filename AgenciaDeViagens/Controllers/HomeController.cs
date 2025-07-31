@@ -132,7 +132,7 @@ namespace AgenciaDeViagens.Controllers
                 PrecoPorNoite = pacote.PrecoPorNoite,
                 DatasOcupadas = datasOcupadas,
                 
-                PrecoTotal = (DataFinal - DataInicial).Days * pacote.PrecoPorNoite
+                PrecoTotal = (DataFinal.Date - DataInicial.Date).Days * pacote.PrecoPorNoite
             };
 
             return View("Pacote", vm);
