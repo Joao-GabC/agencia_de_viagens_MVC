@@ -100,7 +100,8 @@
     .Take(5)
     .ToList();
 
-    var t5ClientesCNomes = top5ClientesCompras.Select(p => p.Nome);
+    var t5ClientesCNomes = top5ClientesCompras.Select(c => c.Nome);
+    var t5ClientesComprasData = top5ClientesCompras.Select(c => c.NumeroDeCompras);
 }
 <script>
     const cmc = document.getElementById('clientesMCompras');
@@ -111,7 +112,7 @@
         labels: @Html.Raw(JsonSerializer.Serialize(t5ClientesCNomes)), //forech item in top5Pacotes, colocar item.Titulo
         datasets: [{
           label: 'nº de compras',
-          data: @Html.Raw(JsonSerializer.Serialize(top5ClientesCompras)), //forech item in top5Pacotes, colocar item.NumVendas
+          data: @Html.Raw(JsonSerializer.Serialize(t5ClientesComprasData)), //forech item in top5Pacotes, colocar item.NumVendas
           borderWidth: 1
         }]
       },
