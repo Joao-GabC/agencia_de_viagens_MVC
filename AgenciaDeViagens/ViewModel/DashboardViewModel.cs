@@ -1,4 +1,5 @@
-﻿using AgenciaDeViagens.Models;
+﻿using AgenciaDeViagens.Migrations;
+using AgenciaDeViagens.Models;
 
 namespace AgenciaDeViagens.ViewModel
 {
@@ -6,5 +7,6 @@ namespace AgenciaDeViagens.ViewModel
     {
         public List<Pacote> Pacotes { get; set; }
         public List<PeriodoIndisponivel> Periodos { get; set; }
+        public List<Cliente> Clientes { get; set; }
     }
 }

@@ -17,6 +17,10 @@ namespace AgenciaDeViagens.Models
 
         public string Passaporte { get; set; } = string.Empty;
 
+        public int NumeroDeCompras { get; set; } = 0;
+
+        public decimal GastoTotal { get; set; }
+
         public ICollection<Pagamento> Pagamentos { get; set; }
         public ICollection<Reserva> Reservas { get; set; }
     }

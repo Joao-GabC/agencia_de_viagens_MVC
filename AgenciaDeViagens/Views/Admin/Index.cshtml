@@ -1,20 +1,33 @@
 ﻿@using System.Text.Json
 @model AgenciaDeViagens.ViewModel.DashboardViewModel
 
-<div class="row justify-content-center border border-1 border-light-subtle rounded shadow p-3 text-center">
-    <div class="col-6">
-        <h1>Número de vendas por destino</h1>
+<div class="row justify-content-center p-3 text-center">
+    <div class="col-6 border border-1 border-light-subtle rounded">
+        <h5>Número de vendas por destino</h5>
         <canvas id="vendasPDestino"></canvas>
     </div>
-    <div class="col-6">
-        <h1>Número de vendas por mês</h1>
+    <div class="col-6 border border-1 border-light-subtle rounded">
+        <h5>Número de vendas por mês (Últimos 5 anos)</h5>
         <canvas id="vendasPMes"></canvas>
+    </div>
+</div>
+<div class="row justify-content-center p-3 text-center">
+    <div class="col-6 border border-1 border-light-subtle rounded">
+        <h5>Clientes com mais compras</h5>
+        <canvas id="clientesMCompras"></canvas>
+    </div>
+    <div class="col-6 border border-1 border-light-subtle rounded">
+        <h5>Clientes que gastaram mais</h5>
+        <canvas id="clientesMCompras"></canvas>
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
 @{
+    //vendas por pacote
+
     var top5Pacotes = Model.Pacotes
     .OrderByDescending(p => p.NumDeVendas)
     .Take(5)
@@ -22,7 +35,6 @@
 
     var top5Titulos = top5Pacotes.Select(p => p.Titulo);
     var top5Vendas = top5Pacotes.Select(p => p.NumDeVendas);
-
 }
 <script>
     const vpd = document.getElementById('vendasPDestino');
@@ -30,10 +42,10 @@
     new Chart(vpd, {
       type: 'bar',
       data: {
-        labels: @Html.Raw(JsonSerializer.Serialize(top5Titulos)), //forech item in top5Pacotes, colocar item.Titulo
+        labels: @Html.Raw(JsonSerializer.Serialize(top5Titulos))
         datasets: [{
           label: 'nº de vendas',
-          data: @Html.Raw(JsonSerializer.Serialize(top5Vendas)), //forech item in top5Pacotes, colocar item.NumVendas
+          data: @Html.Raw(JsonSerializer.Serialize(top5Vendas))
           borderWidth: 1
         }]
       },
@@ -47,9 +59,12 @@
     });
 </script>
 
+
 @{
+    //vendas por mês (últimos 5 anos)
+
     int[] vendasPorMes = new int[12];
-    foreach (var data in Model.Periodos)
+    foreach (var data in Model.Periodos.Where(p => p.DataInicio.Year <= DateTime.Now.Year - 5 && !(p.DataInicio.Year > DateTime.Now.Year)).ToList())
     {
         vendasPorMes[data.DataInicio.Month - 1]++;
     }
@@ -64,6 +79,39 @@
         datasets: [{
           label: 'nº de vendas',
           data: [@string.Join(", ", vendasPorMes)],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+</script>
+
+@{
+    //top 5 clientes que mais compraram
+
+    var top5ClientesCompras = Model.Clientes
+    .OrderByDescending(c => c.NumeroDeCompras)
+    .Take(5)
+    .ToList();
+
+    var t5ClientesCNomes = top5ClientesCompras.Select(p => p.Nome);
+}
+<script>
+    const cmc = document.getElementById('clientesMCompras');
+
+    new Chart(cmc, {
+      type: 'bar',
+      data: {
+        labels: @Html.Raw(JsonSerializer.Serialize(t5ClientesCNomes)), //forech item in top5Pacotes, colocar item.Titulo
+        datasets: [{
+          label: 'nº de compras',
+          data: @Html.Raw(JsonSerializer.Serialize(top5ClientesCompras)), //forech item in top5Pacotes, colocar item.NumVendas
           borderWidth: 1
         }]
       },
