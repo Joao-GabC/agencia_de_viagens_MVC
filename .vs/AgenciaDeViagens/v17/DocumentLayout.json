@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\views\\home\\pacote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\views\\home\\pacote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,19 +22,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "AgenciaDeViagens\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "AgenciaDeViagens\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADgAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-03T01:22:35.269Z",
+              "WhenOpened": "2025-08-03T22:20:07.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pacote.cshtml",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Home\\Pacote.cshtml",
+              "RelativeDocumentMoniker": "AgenciaDeViagens\\Views\\Home\\Pacote.cshtml",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Home\\Pacote.cshtml",
+              "RelativeToolTip": "AgenciaDeViagens\\Views\\Home\\Pacote.cshtml",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAowIEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T22:16:37.029Z",
               "EditorCaption": ""
             },
             {
@@ -45,22 +58,9 @@
               "RelativeDocumentMoniker": "AgenciaDeViagens\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\wwwroot\\css\\site.css",
               "RelativeToolTip": "AgenciaDeViagens\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAEMAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAIwCEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-02T23:44:36.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "AgenciaDeViagens\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "AgenciaDeViagens\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-02T23:36:21.66Z",
+              "WhenOpened": "2025-08-03T21:55:11.666Z",
               "EditorCaption": ""
             }
           ]
