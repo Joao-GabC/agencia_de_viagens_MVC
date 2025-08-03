@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\img\assets\bg1.jpg
 wwwroot\img\franca.png
 wwwroot\img\franca2.jpg
 wwwroot\img\franca3.jpeg

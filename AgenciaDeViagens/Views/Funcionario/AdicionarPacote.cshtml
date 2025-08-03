@@ -1,33 +1,35 @@
 ﻿@model AgenciaDeViagens.ViewModel.AreaDoFuncionarioViewModel
 
-<h1>Insira aqui os dados do novo pacote</h1>
-<hr />
-<div class="row justify-content-center">
-	<form method="post" asp-action="AdicionarPacote" enctype="multipart/form-data" class="col-6 border border-1 border-dark-subtle rounded p-3 my-3 shadow-lg">
-		<label asp-for="Titulo"></label>
-		<input asp-for="Titulo" class="form-control" />
+<div class="container">
+	<h1>Insira aqui os dados do novo pacote</h1>
+	<hr />
+	<div class="row justify-content-center">
+		<form method="post" asp-action="AdicionarPacote" enctype="multipart/form-data" class="col-6 border border-1 border-dark-subtle rounded p-3 my-3 shadow-lg">
+			<label asp-for="Titulo"></label>
+			<input asp-for="Titulo" class="form-control" />
 
-		<label asp-for="Descricao" class="mt-3"></label>
-		<input asp-for="Descricao" class="form-control" />
+			<label asp-for="Descricao" class="mt-3"></label>
+			<input asp-for="Descricao" class="form-control" />
 
-		<label asp-for="PrecoPorNoite" class="mt-3"></label>
-		<input asp-for="PrecoPorNoite" class="form-control" />
+			<label asp-for="PrecoPorNoite" class="mt-3"></label>
+			<input asp-for="PrecoPorNoite" class="form-control" />
 
-		<label asp-for="TextoDaPagina" class="mt-3"></label>
-		<input asp-for="TextoDaPagina" type="text-area" class="form-control" />
-
-
-		<h5 class="mt-4 mb-2">Alguma data já ocupada?</h5>
-		<label>Data inicial</label>
-		<input type="date" class="form-control" name="DataInicial" />
-
-		<label class="mt-3">Data Final</label>
-		<input type="date" class="form-control" name="DataFinal" />
-
-		<label class="mt-3">Fotos</label>
-		<input name="imagens" type="file" accept="image/*" class="form-control" multiple />
+			<label asp-for="TextoDaPagina" class="mt-3"></label>
+			<input asp-for="TextoDaPagina" type="text-area" class="form-control" />
 
 
-		<button type="submit" class="btn btn-success mt-3">Registrar</button>
-	</form>
+			<h5 class="mt-4 mb-2">Alguma data já ocupada?</h5>
+			<label>Data inicial</label>
+			<input type="date" class="form-control" name="DataInicial" />
+
+			<label class="mt-3">Data Final</label>
+			<input type="date" class="form-control" name="DataFinal" />
+
+			<label class="mt-3">Fotos</label>
+			<input name="imagens" type="file" accept="image/*" class="form-control" multiple />
+
+
+			<button type="submit" class="btn btn-success mt-3">Registrar</button>
+		</form>
+	</div>
 </div>

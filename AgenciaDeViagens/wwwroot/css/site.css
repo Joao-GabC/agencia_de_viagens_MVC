@@ -50,3 +50,29 @@ input.form-control {
     border-bottom: 0px !important;
     border-top: 0px !important;
 }
+
+.bg1::before {
+    position: absolute;
+    content: "";
+    background-image: url('../img/assets/bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px),;
+}
+.bg1 {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 40vw;
+}
+    .bg1 > * {
+        z-index: 1;
+    }
+
+.text-shadow {
+    font-family: 'Dm Serif Display';
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 1);
+}

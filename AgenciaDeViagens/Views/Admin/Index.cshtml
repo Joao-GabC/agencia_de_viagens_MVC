@@ -1,25 +1,27 @@
 ﻿@using System.Text.Json
 @model AgenciaDeViagens.ViewModel.DashboardViewModel
 
-<div class="row justify-content-center p-3 text-center">
-    <div class="col-6 border border-1 border-light-subtle rounded">
-        <h5>Número de vendas por destino</h5>
-        <canvas id="vendasPDestino"></canvas>
-    </div>
-    <div class="col-6 border border-1 border-light-subtle rounded">
-        <h5>Número de vendas por mês (Últimos 5 anos)</h5>
-        <canvas id="vendasPMes"></canvas>
-    </div>
-</div>
-<div class="row justify-content-center p-3 text-center">
-    <div class="col-6 border border-1 border-light-subtle rounded">
-        <h5>Clientes com mais compras</h5>
-        <canvas id="clientesMCompras"></canvas>
-    </div>
-    <div class="col-6 border border-1 border-light-subtle rounded">
-        <h5>Clientes que gastaram mais</h5>
-        <canvas id="clientesMCompras"></canvas>
-    </div>
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-6 border border-1 border-light-subtle rounded">
+			<h5 class="mt-3">Número de vendas por destino</h5>
+			<canvas id="vendasPDestino"></canvas>
+		</div>
+		<div class="col-6 border border-1 border-light-subtle rounded">
+			<h5>Número de vendas por mês (Últimos 5 anos)</h5>
+			<canvas id="vendasPMes"></canvas>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-6 border border-1 border-light-subtle rounded">
+			<h5>Clientes com mais compras</h5>
+			<canvas id="clientesMCompras"></canvas>
+		</div>
+		<div class="col-6 border border-1 border-light-subtle rounded">
+			<h5>Clientes que gastaram mais</h5>
+			<canvas id="clientesMGastos"></canvas>
+		</div>
+	</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -42,10 +44,10 @@
     new Chart(vpd, {
       type: 'bar',
       data: {
-        labels: @Html.Raw(JsonSerializer.Serialize(top5Titulos))
+        labels: @Html.Raw(JsonSerializer.Serialize(top5Titulos)),
         datasets: [{
           label: 'nº de vendas',
-          data: @Html.Raw(JsonSerializer.Serialize(top5Vendas))
+          data: @Html.Raw(JsonSerializer.Serialize(top5Vendas)),
           borderWidth: 1
         }]
       },
@@ -64,9 +66,9 @@
     //vendas por mês (últimos 5 anos)
 
     int[] vendasPorMes = new int[12];
-    foreach (var data in Model.Periodos.Where(p => p.DataInicio.Year <= DateTime.Now.Year - 5 && !(p.DataInicio.Year > DateTime.Now.Year)).ToList())
+    foreach (var periodo in Model.Periodos.Where(p => p.DataInicio.Year >= DateTime.Now.Year - 5 && p.DataInicio.Year <= DateTime.Now.Year))
     {
-        vendasPorMes[data.DataInicio.Month - 1]++;
+        vendasPorMes[periodo.DataInicio.Month - 1]++;
     }
 }
 <script>
@@ -111,8 +113,42 @@
       data: {
         labels: @Html.Raw(JsonSerializer.Serialize(t5ClientesCNomes)), //forech item in top5Pacotes, colocar item.Titulo
         datasets: [{
-          label: 'nº de compras',
+          label: 'Nome do cliente',
           data: @Html.Raw(JsonSerializer.Serialize(t5ClientesComprasData)), //forech item in top5Pacotes, colocar item.NumVendas
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+</script>
+
+@{
+    //top 5 clientes que mais gastaram
+
+    var top5ClientesGastos = Model.Clientes
+    .OrderByDescending(c => c.GastoTotal)
+    .Take(5)
+    .ToList();
+
+    var t5ClientesGNomes = top5ClientesGastos.Select(c => c.Nome);
+    var t5ClientesGTotal = top5ClientesCompras.Select(c => c.GastoTotal);
+}
+<script>
+    const cmg = document.getElementById('clientesMGastos');
+
+    new Chart(cmg, {
+      type: 'bar',
+      data: {
+        labels: @Html.Raw(JsonSerializer.Serialize(t5ClientesGNomes)), //forech item in top5Pacotes, colocar item.Titulo
+        datasets: [{
+          label: 'Gasto total do cliente',
+          data: @Html.Raw(JsonSerializer.Serialize(t5ClientesGTotal)), //forech item in top5Pacotes, colocar item.NumVendas
           borderWidth: 1
         }]
       },

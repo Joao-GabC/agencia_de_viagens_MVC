@@ -22,33 +22,13 @@ namespace AgenciaDeViagens.Controllers
         {
             string userEmail = User.FindFirstValue(ClaimTypes.Email)!;
             Cliente clienteAtual = _context.Clientes.FirstOrDefault(x => x.Email == userEmail)!;
+            List<Pagamento> pagamentos = _context.Pagamentos.Where(x => x.PaganteId == clienteAtual.Id).ToList();
+            List<Reserva> reservas = _context.Reservas.Where(x => x.ReservanteId == clienteAtual.Id).ToList();
 
-            return View(clienteAtual);
-        }
-
-        [HttpGet]
-        public IActionResult HistoricoPagamentos()
-        {
-            string userEmail = User.FindFirstValue(ClaimTypes.Email)!;
-            Cliente clienteAtual = _context.Clientes.FirstOrDefault(x => x.Email == userEmail)!;
-            List<Pagamento> pagamentos = _context.Pagamentos.Where(x => x.Id == clienteAtual.Id).ToList();
-            
-            var vm = new ClienteDadosViewModel {
+            var vm = new ClienteDadosViewModel
+            {
                 ClienteNome = clienteAtual.Nome,
-                Pagamentos = pagamentos
-            };
-
-            return View(vm);
-        }
-        [HttpGet]
-        public IActionResult HistoricoReservas()
-        {
-            string userEmail = User.FindFirstValue(ClaimTypes.Email)!;
-            Cliente clienteAtual = _context.Clientes.FirstOrDefault(x => x.Email == userEmail)!;
-            List<Reserva> reservas = _context.Reservas.Where(x => x.Id == clienteAtual.Id).ToList();
-
-            var vm = new ClienteDadosViewModel {
-                ClienteNome = clienteAtual.Nome,
+                Pagamentos = pagamentos,
                 Reservas = reservas
             };
 

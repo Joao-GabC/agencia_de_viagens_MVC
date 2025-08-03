@@ -4,99 +4,105 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>Pacotes</h1>
-<p>Desfrute dos nossos pacotes promocionais de viagem internacional por um preço camarada!</p>
-<hr />
+<div class="container-fluid text-center">
+    <div class="row bg1 mb-5 align-content-center">
+        <h1 class="text-shadow text-white">Pacotes</h1>
+		<p class="text-shadow text-white">Desfrute dos nossos pacotes promocionais de viagem internacional por um preço camarada!</p>
+    </div>
 
-<div class="row mb-4">
-    <form method="post" class="col-8 d-flex flex-column gap-3 justify-content-between">
-        <div class="row">
-            <div class="col-4">
-	            <label for="checkin">Escolha a data desejada de embarque:</label>
-            </div>
-            <div class="col align-items-center d-flex">
-                <input name="DataInicial" class="form-control" type="date" id="checkin" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <label for="checkout">Escolha a data desejada de chegada:</label>
-            </div>
-            <div class="col align-items-center d-flex">
-                <input name="DataFinal" class="form-control" type="date" id="checkout" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-primary w-100" type="submit">Verificar disponibilidade</button>
-            </div>
-        </div>
-    </form>
-    <form method="post" asp-action="pesquisarPNome" class="col d-flex flex-column justify-content-between">
-        <div class="row">
-            <div class="col-4">
-                <label for="searchString" class="text-center">Pesquise por nome:</label>
-            </div>
-            <div class="col d-flex align-items-between">
-                <input class="form-control" type="text" name="searchString" id="searchString" placeholder="Escreva aqui" />
-            </div>
-            <div class="d-flex flex-column justify-content-between">
-                <div class="col">
-                    <div class="row">
-                        <div class="col text-secondary text-center fst-italic mt-2 w-100">
-                            <p>Lembre-se de usar acentos ou sinais quando necessário!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-primary w-100" type="submit">Pesquisar</button>
-            </div>
-        </div>
-    </form>
-</div>
-
-@{
-    //uma row com 4 itens feita a cada 4 itens
-    int pacotesCarreagados = 0;
-}
-@for (int limiteDe4 = 0; limiteDe4 != 5;)
-{
-    <div class="row my-2">
-    @foreach (var item in Model.Pacotes.Skip(pacotesCarreagados))
-    {
-        <div class="col-3 d-flex p-0">
-			<div class="card">
-				<img src="@item.ImagemUrl[0]" class="card-img-top">
-				<div class="card-body d-flex flex-column justify-content-between">
-					<div>
-						<h5 class="card-title">@item.Titulo</h5>
-						<p class="card-text">@item.Descricao</p>
-					</div>
-					<div>
-						<hr />
-						<div class="d-flex justify-content-between text-center">
-							<p class="card-text text-success my-auto me-2"><span class="text-success h5">R$@item.PrecoPorNoite</span> por noite</p>
-							<a asp-controller="Home" asp-action="Pacote" asp-route-id="@item.Id" class="btn btn-outline-success">Agendar Reserva</a>
+	<div class="row mb-4 mt-2 mx-4">
+		<form method="post" class="col-8 d-flex flex-column gap-3 justify-content-between">
+			<div class="row">
+				<div class="col-4">
+					<label for="checkin">Escolha a data desejada de embarque:</label>
+				</div>
+				<div class="col align-items-center d-flex">
+					<input name="DataInicial" class="form-control" type="date" id="checkin" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<label for="checkout">Escolha a data desejada de chegada:</label>
+				</div>
+				<div class="col align-items-center d-flex">
+					<input name="DataFinal" class="form-control" type="date" id="checkout" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<button class="btn btn-primary w-100" type="submit">Verificar disponibilidade</button>
+				</div>
+			</div>
+		</form>
+		<form method="post" asp-action="pesquisarPNome" class="col d-flex flex-column justify-content-between">
+			<div class="row">
+				<div class="col-4">
+					<label for="searchString" class="text-center">Pesquise por nome:</label>
+				</div>
+				<div class="col d-flex align-items-between">
+					<input class="form-control" type="text" name="searchString" id="searchString" placeholder="Escreva aqui" />
+				</div>
+				<div class="d-flex flex-column justify-content-between">
+					<div class="col">
+						<div class="row">
+							<div class="col text-secondary text-center fst-italic mt-2 w-100">
+								<p>Lembre-se de usar acentos ou sinais quando necessário!</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-        </div>
-        
-        pacotesCarreagados++;
-        limiteDe4++;
-        if(limiteDe4 == 4)
-        {
-            limiteDe4 = 0;
-            break;
-        }
-    }
-    </div>
-    if(pacotesCarreagados == Model.Pacotes.Count) { limiteDe4 = 5; }
-}
+			<div class="row">
+				<div class="col">
+					<button class="btn btn-primary w-100" type="submit">Pesquisar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<br />
+
+<div class="container">
+	@{
+		//uma row com 4 itens feita a cada 4 itens
+		int pacotesCarreagados = 0;
+	}
+	@for (int limiteDe4 = 0; limiteDe4 != 5;)
+	{
+		<div class="row my-2">
+			@foreach (var item in Model.Pacotes.Skip(pacotesCarreagados))
+			{
+				<div class="col-3 d-flex p-0">
+					<div class="card">
+						<img src="@item.ImagemUrl[0]" class="card-img-top">
+						<div class="card-body d-flex flex-column justify-content-between">
+							<div>
+								<h5 class="card-title">@item.Titulo</h5>
+								<p class="card-text">@item.Descricao</p>
+							</div>
+							<div>
+								<hr />
+								<div class="d-flex justify-content-between text-center">
+									<p class="card-text text-success my-auto me-2"><span class="text-success h5">R$@item.PrecoPorNoite</span> por noite</p>
+									<a asp-controller="Home" asp-action="Pacote" asp-route-id="@item.Id" class="btn btn-outline-success">Agendar Reserva</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				pacotesCarreagados++;
+				limiteDe4++;
+				if (limiteDe4 == 4)
+				{
+					limiteDe4 = 0;
+					break;
+				}
+			}
+		</div>
+		if (pacotesCarreagados == Model.Pacotes.Count) { limiteDe4 = 5; }
+	}
+</div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {

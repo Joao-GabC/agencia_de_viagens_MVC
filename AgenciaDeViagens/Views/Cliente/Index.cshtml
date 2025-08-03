@@ -1,8 +1,53 @@
-﻿@model Cliente
-<div class="container mt-3">
-	<h1>Olá, @Model.Nome</h1>
+﻿@model AgenciaDeViagens.ViewModel.ClienteDadosViewModel
+
+<div class="container">
+	<div class="text-center">
+		<h1>Área do Cliente</h1>
+		<h3>Olá, @Model.ClienteNome</h3>
+	</div>
 	<hr />
 
-	<a asp-controller="Cliente" asp-action="HistoricoPagamentos" asp-route-id="@Model.Id" class="btn btn-primary">Histórico de Pagamentos</a>
-	<a asp-controller="Cliente" asp-action="HistoricoReservas" asp-route-id="@Model.Id" class="btn btn-primary">Histórico de Reservas</a>
+	<h1>Histórico de Reservas de @Model.ClienteNome</h1>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Nome da Reserva</th>
+				<th>Datas de Estadia</th>
+				<th>Preço Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model.Reservas)
+			{
+				<tr>
+					<td>@item.Titulo</td>
+					<td>@item.DataInicio até @item.DataFim</td>
+					<td>@item.PrecoTotal</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+	<hr />
+
+	<h1>Histórico de Pagamentos de @Model.ClienteNome</h1>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Preço</th>
+				<th>Descrição da Compra</th>
+				<th>Data da Compra</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model.Pagamentos)
+			{
+				<tr>
+					<td>@item.Preco</td>
+					<td>@item.DescCompra</td>
+					<td>@item.DataDeCompra</td>
+				</tr>
+			}
+		</tbody>
+	</table>
 </div>

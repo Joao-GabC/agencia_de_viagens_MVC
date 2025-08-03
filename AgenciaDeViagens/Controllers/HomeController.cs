@@ -161,7 +161,11 @@ namespace AgenciaDeViagens.Controllers
                 PrecoTotal = PrecoTotal,
                 ReservanteId = clienteAtual.Id
             };
+
             pacote.NumDeVendas++;
+            clienteAtual.NumeroDeCompras++;
+            clienteAtual.GastoTotal += PrecoTotal;
+
             _context.Pagamentos.Add(dadosPagamento);
             _context.Reservas.Add(dadosReserva);
             _context.SaveChanges();

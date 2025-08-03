@@ -60,22 +60,6 @@ namespace AgenciaDeViagens.Data
                     TextoDaPagina = "Londres é a capital do Reino Unido e uma das cidades mais influentes do mundo. Localizada no sudeste da Inglaterra, às margens do rio Tâmisa, é um importante centro político, financeiro e cultural. A cidade abriga cerca de 9 milhões de pessoas e recebe milhões de turistas todos os anos.<br /><br />Entre seus marcos mais famosos estão o Big Ben, a Torre de Londres, o Palácio de Buckingham e a roda-gigante London Eye. Londres também é conhecida por seus museus, teatros e parques, como o Museu Britânico, a National Gallery e o Hyde Park.<br /><br />A cidade é extremamente diversa, com pessoas de todas as partes do mundo vivendo e trabalhando ali. Essa diversidade se reflete na culinária, nas artes e na vida cotidiana, fazendo de Londres um lugar dinâmico e multicultural."
                 }
             );
-            builder.Entity<PeriodoIndisponivel>().HasData(
-                new PeriodoIndisponivel
-                {
-                    Id = 1,
-                    DataInicio = new DateOnly(2026, 07, 10),
-                    DataFim = new DateOnly(2026, 07, 30),
-                    PacoteId = 1
-                },
-                new PeriodoIndisponivel
-                {
-                    Id = 2,
-                    DataInicio = new DateOnly(2026, 08, 10),
-                    DataFim = new DateOnly(2026, 08, 30),
-                    PacoteId = 2
-                }
-            );
         }
     }
 }

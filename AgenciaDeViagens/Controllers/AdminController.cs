@@ -18,7 +18,8 @@ namespace AgenciaDeViagens.Controllers
             var vm = new DashboardViewModel
             {
                 Pacotes = _context.Pacotes.ToList(),
-                Periodos = _context.PeriodosIndisponiveis.ToList()
+                Periodos = _context.PeriodosIndisponiveis.ToList(),
+                Clientes = _context.Clientes.ToList()
             };
             return View(vm);
         }
