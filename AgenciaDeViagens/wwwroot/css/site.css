@@ -37,7 +37,12 @@ body {
 .card {
     max-width: 20vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.25s ease-out;
 }
+    .card:hover {
+        transform: scale(102%,102%);
+    }
+
 .card-img-top {
     object-fit: cover;
     min-height: 40%;
@@ -108,7 +113,7 @@ input.form-control {
 }
 .bg1 {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 40vw;
     overflow: hidden;
 }
@@ -116,6 +121,10 @@ input.form-control {
 .home-container {
     z-index: 2 !important;
     position: relative !important;
+}
+
+#contentbox {
+    animation: contentbox-anim 1.5s cubic-bezier(0,.75,.4,1) 1;
 }
 
 .text-shadow {
@@ -130,4 +139,8 @@ input.form-control {
 .border-blend {
     border-color: #fff !important;
     background-color: #fff;
+}
+
+.card.w-100 {
+    max-width: 100%;
 }

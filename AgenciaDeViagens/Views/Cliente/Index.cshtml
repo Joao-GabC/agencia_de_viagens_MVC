@@ -1,53 +1,58 @@
 ﻿@model AgenciaDeViagens.ViewModel.ClienteDadosViewModel
 
 <div class="container">
-	<div class="text-center">
-		<h1>Área do Cliente</h1>
-		<h3>Olá, @Model.ClienteNome</h3>
+	<div class="text-center mt-5 mb-5">
+		<h1 class="display-3">Área do Cliente</h1>
+		<p class="fw-bold">Olá, @Model.ClienteNome</p>
 	</div>
 	<hr />
 
-	<h1>Histórico de Reservas de @Model.ClienteNome</h1>
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>Nome da Reserva</th>
-				<th>Datas de Estadia</th>
-				<th>Preço Total</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var item in Model.Reservas)
-			{
+	<h1>Seu Histórico de Reservas</h1>
+
+	<div class="card w-100">
+		<table class="table table-bordered table-striped">
+			<thead>
 				<tr>
-					<td>@item.Titulo</td>
-					<td>@item.DataInicio até @item.DataFim</td>
-					<td>@item.PrecoTotal</td>
+					<th>Nome da Reserva</th>
+					<th>Datas de Estadia</th>
+					<th>Preço Total</th>
 				</tr>
-			}
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				@foreach (var item in Model.Reservas)
+				{
+					<tr>
+						<td>@item.Titulo</td>
+						<td>@item.DataInicio até @item.DataFim</td>
+						<td>@item.PrecoTotal R$</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
 
 	<hr />
 
-	<h1>Histórico de Pagamentos de @Model.ClienteNome</h1>
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>Preço</th>
-				<th>Descrição da Compra</th>
-				<th>Data da Compra</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var item in Model.Pagamentos)
-			{
+	<h1 class="mt-5">Seu Histórico de Pagamentos</h1>
+	<div class="card w-100">
+		<table class="table table-bordered table-striped">
+			<thead>
 				<tr>
-					<td>@item.Preco</td>
-					<td>@item.DescCompra</td>
-					<td>@item.DataDeCompra</td>
+					<th>Preço</th>
+					<th>Descrição da Compra</th>
+					<th>Data da Compra</th>
 				</tr>
-			}
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				@foreach (var item in Model.Pagamentos)
+				{
+					<tr>
+						<td>@item.Preco R$</td>
+						<td>@item.DescCompra</td>
+						<td>@item.DataDeCompra</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
 </div>

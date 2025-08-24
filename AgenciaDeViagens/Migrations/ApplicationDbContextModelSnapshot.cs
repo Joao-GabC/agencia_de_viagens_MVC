@@ -194,22 +194,6 @@ namespace AgenciaDeViagens.Migrations
                     b.HasIndex("PacoteId");
 
                     b.ToTable("PeriodosIndisponiveis");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            DataFim = new DateOnly(2026, 7, 30),
-                            DataInicio = new DateOnly(2026, 7, 10),
-                            PacoteId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            DataFim = new DateOnly(2026, 8, 30),
-                            DataInicio = new DateOnly(2026, 8, 10),
-                            PacoteId = 2
-                        });
                 });
 
             modelBuilder.Entity("AgenciaDeViagens.Models.Reserva", b =>

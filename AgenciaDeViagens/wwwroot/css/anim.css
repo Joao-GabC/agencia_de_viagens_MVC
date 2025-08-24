@@ -1,0 +1,8 @@
+﻿@keyframes contentbox-anim {
+    0% {
+        top: 60vh;
+    }
+    100% {
+        top: 0vh;
+    }
+}

@@ -10,43 +10,37 @@
     <div asp-validation-summary="All" style="color: red;"></div>
     <div class="border border-1 shadow p-3 row">
         <form asp-action="Register" method="post">
-
             <h5 class="mt-2 mb-1">Dados da Conta</h5>
-            <div class="col mb-3">
-                <div class="mt-2">
-                    <label asp-for="Email"></label><br />
-                    <input asp-for="Email" class="form-control" />
-                </div>
-
-                <div class="mt-2">
-                    <label>Senha</label><br />
-                    <input asp-for="Password" class="form-control" />
-                </div>
-
-                <div class="mt-2">
+            <div class="row">
+				<div class="col mb-3">
+					<label asp-for="Email"></label><br />
+					<input asp-for="Email" class="form-control" />
+				</div>
+				<div class="col-3">
+					<label>Senha</label><br />
+					<input asp-for="Password" class="form-control" />
+				</div>
+                <div class="col-3">
                     <label asp-for="ConfirmPassword"></label><br />
                     <input asp-for="ConfirmPassword" class="form-control" />
                 </div>
             </div>
 
             <h5 class="mt-4 mb-1">Dados do Cliente</h5>
-            <div class="d-flex mb-3">
-                <div class="me-3">
+            <div class="row mb-4">
+                <div class="col">
                     <label asp-for="Nome"></label><br />
                     <input asp-for="Nome" class="form-control" />
                 </div>
-
-                <div class="me-3">
+                <div class="col">
                     <label asp-for="Telefone"></label><br />
                     <input asp-for="Telefone" class="form-control" />
                 </div>
-
-                <div class="me-3">
+                <div class="col">
                     <label asp-for="Cpf"></label><br />
                     <input asp-for="Cpf" class="form-control" />
                 </div>
-
-                <div class="me-3">
+                <div class="col">
                     <label asp-for="Passaporte"></label><br />
                     <input asp-for="Passaporte" class="form-control" />
                 </div>

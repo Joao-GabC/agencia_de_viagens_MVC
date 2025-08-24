@@ -5,7 +5,7 @@
 namespace AgenciaDeViagens.Migrations
 {
     /// <inheritdoc />
-    public partial class clientefix : Migration
+    public partial class accountfix : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

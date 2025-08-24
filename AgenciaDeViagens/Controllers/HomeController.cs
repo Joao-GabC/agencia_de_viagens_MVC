@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.IdentityModel.Tokens;
@@ -34,10 +35,19 @@ namespace AgenciaDeViagens.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var vm = new ReservarViewModel
+            ReservarViewModel vm = new();
+            try
             {
-                Pacotes = _context.Pacotes.ToList()
-            };
+                vm = new ReservarViewModel
+                {
+                    Pacotes = _context.Pacotes.ToList()
+                };
+            }
+            catch (SqlException)
+            {
+                return View("ErrorPage");
+            }
+            
             return View(vm);
         }
         [HttpPost]
@@ -97,7 +107,6 @@ namespace AgenciaDeViagens.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
 
         public IActionResult Pacote(int id)
         {

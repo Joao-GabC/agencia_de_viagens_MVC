@@ -7,19 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AgenciaDeViagens.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly IEmailSender _emailSender;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IEmailSender emailSender, ApplicationDbContext context)
+        public AccountController(UserManager<IdentityUser> userManager, IEmailSender emailSender, SignInManager<IdentityUser> signInManager, ApplicationDbContext context)
+            : base(signInManager, context)
         {
             _userManager = userManager;
-            _signInManager = signInManager;
             _emailSender = emailSender;
-            _context = context;
+            _context = base._context;
+            _signInManager = base._signInManager;
         }
 
         // --- REGISTRO ---
@@ -166,7 +167,7 @@ namespace AgenciaDeViagens.Controllers
                     return RedirectToAction("Index", "Home");
                 }
 
-                ModelState.AddModelError(string.Empty, "Tentativa de login inválida.");
+                ModelState.AddModelError(string.Empty, "Informações de Login Inválidas.");
             }
             return View(model);
         }

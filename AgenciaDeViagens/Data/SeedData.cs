@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace LojaIdentity.Data;
+namespace AgenciaDeViagens.Data;
 
 public static class SeedData
 {
@@ -21,7 +21,7 @@ public static class SeedData
         }
 
         // Criar um usuário Admin padrão
-        var adminEmail = configuration["AdminUser:Email"] ?? "admin@loja.com";
+        var adminEmail = configuration["AdminUser:Email"] ?? "admin@email.com";
         var adminPassword = configuration["AdminUser:Password"] ?? "Admin@123";
 
         var adminUser = await userManager.FindByEmailAsync(adminEmail);
@@ -35,6 +35,11 @@ public static class SeedData
             };
             await userManager.CreateAsync(adminUser, adminPassword);
             await userManager.AddToRoleAsync(adminUser, "Admin");
+        }
+        else
+        {
+            var token = await userManager.GeneratePasswordResetTokenAsync(adminUser);
+            await userManager.ResetPasswordAsync(adminUser, token, adminPassword);
         }
     }
 }

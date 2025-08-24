@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgenciaDeViagens.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250706154226_seed")]
-    partial class seed
+    [Migration("20250818141536_account-fix")]
+    partial class accountfix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,9 +41,15 @@ namespace AgenciaDeViagens.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("GastoTotal")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumeroDeCompras")
+                        .HasColumnType("int");
 
                     b.Property<string>("Passaporte")
                         .IsRequired()
@@ -99,6 +105,9 @@ namespace AgenciaDeViagens.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("NumDeVendas")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("PrecoPorNoite")
                         .HasColumnType("decimal(18,2)");
 
@@ -120,6 +129,7 @@ namespace AgenciaDeViagens.Migrations
                             Id = 1,
                             Descricao = "Pacote de viagem completo para as Ilhas Faroé. Inclui estadia, voo e guia.",
                             ImagemUrl = "[\"/img/ilhasfaroe.jpg\",\"/img/ilhasfaroe2.jpg\",\"/img/ilhasfaroe3.jpg\"]",
+                            NumDeVendas = 1248,
                             PrecoPorNoite = 270m,
                             TextoDaPagina = "As Ilhas Faroé são um arquipélago de 18 ilhas localizadas no Atlântico Norte, entre a Islândia, a Noruega e a Escócia. Elas formam um território autônomo sob o Reino da Dinamarca e possuem cerca de 50 mil habitantes, com a capital localizada em Tórshavn.<br /><br />O clima é frio e úmido, com muita neblina, ventos fortes e chuvas frequentes. A paisagem é composta por montanhas, fiordes profundos e penhascos à beira-mar, criando um cenário dramático e isolado. A pesca é a principal atividade econômica.<br /><br />A cultura feroesa tem raízes nórdicas e é marcada pela preservação da língua feroesa, da música tradicional e de costumes antigos. Apesar do isolamento, as ilhas mantêm uma vida moderna e uma forte identidade cultural.",
                             Titulo = "Pacote Completo - Ilhas Faroé"
@@ -129,6 +139,7 @@ namespace AgenciaDeViagens.Migrations
                             Id = 2,
                             Descricao = "Pacote de viagem completo para Londres. Inclui estadia, voo e guia.",
                             ImagemUrl = "[\"/img/londres.jpg\",\"/img/londres2.jpg\",\"/img/londres3.jpg\"]",
+                            NumDeVendas = 3129,
                             PrecoPorNoite = 150m,
                             TextoDaPagina = "Londres é a capital do Reino Unido e uma das cidades mais influentes do mundo. Localizada no sudeste da Inglaterra, às margens do rio Tâmisa, é um importante centro político, financeiro e cultural. A cidade abriga cerca de 9 milhões de pessoas e recebe milhões de turistas todos os anos.<br /><br />Entre seus marcos mais famosos estão o Big Ben, a Torre de Londres, o Palácio de Buckingham e a roda-gigante London Eye. Londres também é conhecida por seus museus, teatros e parques, como o Museu Britânico, a National Gallery e o Hyde Park.<br /><br />A cidade é extremamente diversa, com pessoas de todas as partes do mundo vivendo e trabalhando ali. Essa diversidade se reflete na culinária, nas artes e na vida cotidiana, fazendo de Londres um lugar dinâmico e multicultural.",
                             Titulo = "Pacote Completo - Londres"
@@ -143,8 +154,9 @@ namespace AgenciaDeViagens.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("DataDeCompra")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("DataDeCompra")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DescCompra")
                         .IsRequired()
@@ -153,8 +165,8 @@ namespace AgenciaDeViagens.Migrations
                     b.Property<int>("PaganteId")
                         .HasColumnType("int");
 
-                    b.Property<double>("Preco")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Preco")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -185,22 +197,6 @@ namespace AgenciaDeViagens.Migrations
                     b.HasIndex("PacoteId");
 
                     b.ToTable("PeriodosIndisponiveis");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            DataFim = new DateOnly(2026, 7, 30),
-                            DataInicio = new DateOnly(2026, 7, 10),
-                            PacoteId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            DataFim = new DateOnly(2026, 8, 30),
-                            DataInicio = new DateOnly(2026, 8, 10),
-                            PacoteId = 2
-                        });
                 });
 
             modelBuilder.Entity("AgenciaDeViagens.Models.Reserva", b =>
