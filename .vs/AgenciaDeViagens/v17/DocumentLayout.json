@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\wwwroot\\js\\errorpage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\wwwroot\\js\\errorpage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\wwwroot\\js\\errorpage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\wwwroot\\js\\errorpage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\views\\shared\\errorpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\views\\shared\\errorpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|c:\\users\\usuario\\desktop\\portfolio\\agenciadeviagens\\agenciadeviagens\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A752870D-A8B2-4FC7-AC5D-3E36E70D9173}|AgenciaDeViagens\\AgenciaDeViagens.csproj|solutionrelative:agenciadeviagens\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\appsettings.json",
               "RelativeDocumentMoniker": "AgenciaDeViagens\\appsettings.json",
@@ -43,39 +43,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "AgenciaDeViagens\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Controllers\\HomeController.cs",
               "RelativeToolTip": "AgenciaDeViagens\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAnwCgAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAArwC0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-22T21:03:52.206Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "errorpage.js",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\wwwroot\\js\\errorpage.js",
               "RelativeDocumentMoniker": "AgenciaDeViagens\\wwwroot\\js\\errorpage.js",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\wwwroot\\js\\errorpage.js",
               "RelativeToolTip": "AgenciaDeViagens\\wwwroot\\js\\errorpage.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-09-15T16:16:58.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ErrorPage.cshtml",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Shared\\ErrorPage.cshtml",
               "RelativeDocumentMoniker": "AgenciaDeViagens\\Views\\Shared\\ErrorPage.cshtml",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\portfolio\\AgenciaDeViagens\\AgenciaDeViagens\\Views\\Shared\\ErrorPage.cshtml",
               "RelativeToolTip": "AgenciaDeViagens\\Views\\Shared\\ErrorPage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-24T21:32:56.429Z",
               "EditorCaption": ""

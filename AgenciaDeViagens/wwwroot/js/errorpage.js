@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const countdown = document.getElementById("countdown");
+    console.log(countdown);
 
     const interval = setInterval(() => {
         countdown.innerHTML = countdownNum;
