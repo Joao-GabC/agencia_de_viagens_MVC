@@ -271,3 +271,7 @@ C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\AgenciaDeViagens\bin\Debug\n
 C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\AgenciaDeViagens\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\AgenciaDeViagens\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\AgenciaDeViagens\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\AgenciaDeViagens\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\AgenciaDeViagens\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\AgenciaDeViagens\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\USUARIO\Desktop\portfolio\AgenciaDeViagens\AgenciaDeViagens\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

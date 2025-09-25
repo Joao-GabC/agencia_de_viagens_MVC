@@ -48,7 +48,7 @@ namespace AgenciaDeViagens.Controllers
                 return View("ErrorPage");
             }
             
-            return View(vm);
+            return View("ErrorPage");
         }
         [HttpPost]
         public IActionResult Index(DateOnly DataInicial, DateOnly DataFinal)
